@@ -1,0 +1,32 @@
+
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 40px 30px;
+    max-width: 400px;
+}
+
+.input-group .form-control {
+    border-radius: 8px 0 0 8px;
+    box-shadow: none;
+}
+
+.input-group .btn {
+    border-radius: 0 8px 8px 0;
+}
+
+
+#weatherResult {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
