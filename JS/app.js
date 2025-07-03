@@ -6,7 +6,7 @@ form.addEventListener('submit', async function(e) {
     e.preventDefault();
     let city = input.value.trim();
     if (!city) return;
-
+    https://api.weather.gov/gridpoints/AKQ/30350950,89184667/forecast/hourly?units=us
     // 1. Geocode city to get coordinates
     let geoUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`;
     try {
