@@ -2,11 +2,28 @@ let form = document.getElementById('weatherForm');
 let input = document.getElementById('cityInput');
 let resultDiv = document.getElementById('weatherResult');
 
+const findMe = () => {
+  
+
+  const success = (position) => {
+    console.log(position);
+    status.textContent = "success";
+    const { latitude, longitude } = position.coords;
+    ;
+  };
+  const error = () => {
+    
+  };
+
+  navigator.geolocation.getCurrentPosition(success, error);
+};
+
 form.addEventListener('submit', async function(e) {
     e.preventDefault();
     let city = input.value.trim();
     if (!city) return;
     https://api.weather.gov/gridpoints/AKQ/30350950,89184667/forecast/hourly?units=us
+
     // 1. Geocode city to get coordinates
     let geoUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`;
     try {
